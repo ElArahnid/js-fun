@@ -22,18 +22,17 @@ for (let val of data) {
 }
 
 
-function showTime(day = new Date) {
-let now = new Date();
-let final = new Date(2023, 1, 7);
-let d, h, m, s;
-let time = final - now;
-m = Math.floor(time / 60);
-s = time - m * 60;
-h = Math.floor(m / 60);
-m -= h * 60;
-d = Math.floor(h / 24);
-h -= d * 24;
-return `${d}д ${h}ч ${m}мин ${s}сек`;
+function showTime(day = new Date(2023, 1, 7, 23)) {
+    let now = new Date(); 
+    let d, h, m, s;
+    let time = Math.floor((day - now) / 1000);
+    m = Math.floor(time / 60);
+    s = time - m * 60;
+    h = Math.floor(m / 60);
+    m -= h * 60;
+    d = Math.floor(h / 24);
+    h -= d * 24;
+    return `${d}д. ${h}ч. ${m}мин. ${s}сек.`
 }
 
 setInterval(function() {
