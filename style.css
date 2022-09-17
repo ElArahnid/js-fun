@@ -8,6 +8,7 @@ body {
     padding: 100px;
     box-sizing: border-box;
     display: flex;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -21,7 +22,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 30px;
-    border-radius: 8px;
+    /* margin: 7px; */
+    border-radius: 50%;
     box-shadow: 1px 1px 5px #0002;
     transition-property: transform, box-shadow;
     transition-duration: .5s;
@@ -30,6 +32,12 @@ body {
 
 .card:hover {
     transform: scale(1.02, 1.02);
-    box-shadow: 1px 1px 5px #02a298aa, 
-                1px 1px 15px #02a298aa;
+    box-shadow: 1px 1px 5px #f6ec83aa, 
+                1px 1px 15px #deae1cda;
 }
+
+/*
+git add .
+git commit -m "olololo"
+git push origin master
+*/
